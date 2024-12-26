@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  padding-top: 50px;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'Marvelous';
+  src: url('fonts/Marvelous-Semi-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'reselu';
+  src: url('fonts/Reselu-R9q36.ttf') format('truetype');
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffec83;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: solid #ff7200;
+  z-index: 1000;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 0;
+}
+
+.navbar a {
+  color: #ff7200;
+  text-decoration: none;
+  margin: 0 20px;
+  text-shadow: 1px 1px 0 #000000;
+  font-family: 'reselu', Arial, Helvetica, sans-serif;
+}
+
+/* search bar */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+  margin-top: 0px;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ff7200;
+  border-radius: 5px;
+  outline: none;
+  width: 200px;
+  font-size: 14px;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #ff7200;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #ff9f77;
+}
+
+/* katalog produk */
+.catalogue {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding-bottom: 50px;
+  flex: 1;
+  margin: 20px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  max-width: 200px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-details {
+  padding: 10px;
+  text-align: center;
+}
+
+.product-details h3 {
+  font-size: 14px;
+  color: #333;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+.product-details .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.shopee-link {
+  display: inline-block;
+  background-color: #ff7200;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.shopee-link:hover {
+  background-color: #e65c00;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #ffec83;
+  color: #ff0000;
+  text-shadow: 1px 1px 0 #ffffff;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: solid #ff7200;
+  margin-bottom: 0em;
+  bottom: 0;
+}
+
+footer span {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.sosmedlogo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  background-color: #ff7200;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    height: 100px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: center;
+  }
+.search-bar{
+  margin-top: 15px;
+}
+  .catalogue {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-details {
+  padding: 10px;
+  text-align: center;
+}
+
+.product-details h3 {
+  font-size: 14px;
+  color: #333;
+  margin: 10px 0;
+  line-height: 1.4;
+  display: -webkit-box; /* Membuat elemen menjadi flexbox berbasis blok */
+  -webkit-box-orient: vertical; /* Mengatur orientasi box ke vertikal */
+  overflow: hidden; /* Menyembunyikan teks yang melampaui batas */
+  text-overflow: ellipsis; /* Menambahkan "..." pada teks yang terpotong */
+  -webkit-line-clamp: 2; /* Membatasi teks hingga 3 baris */
+}
+}
+
+@media (min-width: 800px) {
+  header {
+    padding: 0 40px;
+  }
+
+  .logo {
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .navbar {
+    margin-right: 30px;
+  }
+}

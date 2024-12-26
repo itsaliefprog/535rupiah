@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    padding-top: 50px;
+}
+
+@font-face {
+    font-family: 'Marvelous';
+    src: url('fonts/Marvelous-Semi-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'reselu';
+    src: url('fonts/Reselu-R9q36.ttf') format('truetype');
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffec83;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: solid #ff7200;
+    z-index: 1000;
+}
+
+
+.logo {
+    width: 120px;
+    margin-bottom: 0;
+}
+
+.navbar a {
+    color: #ff7200;
+    text-decoration: none;
+    margin: 0 20px;
+    text-shadow: 1px 1px 0 #000000;
+    font-family: 'reselu', Arial, Helvetica, sans-serif;
+}
+
+/* Bagian Tengah */
+main {
+    padding: 20px;
+}
+
+/* Section: About */
+.about-section {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    margin-bottom: 20px;
+  }
+.about-section h1 {
+    font-family: 'reselu', Arial, sans-serif;
+    color: #ff7200;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+}
+
+/* Section: Penyuka Rupiah */
+.fans-section {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+  }
+.fans-section h2 {
+    font-family: 'reselu', Arial, sans-serif;
+    color: #ff7200;
+    font-size: 1.8rem;
+    margin: 20px 0 10px;
+}
+
+/* Galeri Foto Horizontal */
+.photo-gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.photo-gallery img {
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #ffec83;
+    color: #ff0000;
+    text-shadow: 1px 1px 0 #ffffff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: solid #ff7200;
+    margin-bottom: 0px;
+}
+
+footer span {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.sosmedlogo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    background-color: #ff7200;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+}
+
+.admin {
+    position: fixed;
+    /* Menempatkan elemen di posisi tetap */
+    bottom: 15px;
+    /* Berada di dekat bagian bawah layar */
+    right: 15px;
+    /* Jarak dari tepi kanan layar */
+    font-size: 16px;
+    /* Ukuran teks */
+    color: #ff000079;
+    /* Warna teks */
+    text-decoration: none;
+    /* Menghapus garis bawah */
+    background-color: #ffec83;
+    /* Latar belakang serupa dengan footer */
+    padding: 5px 10px;
+    /* Spasi dalam */
+    border-radius: 5px;
+    /* Membuat sudut membulat */
+    font-weight: bold;
+    /* Menebalkan teks */
+    
+}
+
+.admin:hover {
+    background-color: #ff7200;
+    /* Warna saat hover */
+    color: #ffffff;
+    /* Warna teks saat hover */
+
+}
+
+/* Media Query for Mobile */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        height: 100px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 800px) {
+    header {
+        padding: 0 40px;
+    }
+
+    .logo {
+        margin-left: 30px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .navbar {
+        margin-right: 30px;
+    }
+}

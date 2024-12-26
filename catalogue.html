@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue</title>
+  <link rel="stylesheet" href="stylescatalogue.css">
+  <link rel="icon" href="Images/favicon535.png" type="image/png">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <a href="index.html">
+      <img src="Images/535logo.png" class="logo" alt="Logo">
+    </a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- Search bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <button type="button" onclick="searchProducts()">Search</button>
+  </div>
+
+  <!-- Produk-produk -->
+  <div class="container mt-4">
+    <div id="productContainer" class="catalogue"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>535RUPIAH |</span>
+    <a href="https://www.instagram.com/535rupiah?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+      <img src="Images/whiteinstagram.png" class="sosmedlogo">
+    </a>
+  </footer>
+
+  <!-- Script -->
+  <script type="module" src="catalogue.js"></script>
+</body>
+
+</html>

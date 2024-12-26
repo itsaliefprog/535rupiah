@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  padding-top: 50px;
+}
+
+@font-face {
+  font-family: 'Marvelous';
+  src: url('fonts/Marvelous-Semi-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'reselu';
+  src: url('fonts/Reselu-R9q36.ttf') format('truetype');
+}
+/* Default hidden state */
+.slide-effect {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* Slide in animation */
+.slide-effect.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Default hidden state */
+.fade-effect {
+  opacity: 0;
+  transition: opacity 4s ease; /* Durasi dan transisi efek */
+}
+
+/* Fade-in animation */
+.fade-effect.visible {
+  opacity: 1;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffec83;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: solid #ff7200;
+  z-index: 1000;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 0;
+}
+
+.navbar a {
+  color: #ff7200;
+  text-decoration: none;
+  margin: 0 20px;
+  text-shadow: 1px 1px 0 #000000;
+  font-family: 'reselu', Arial, sans-serif;
+}
+
+/* Best-seller Section */
+.best-seller {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffec83;
+  text-shadow: 1px 1px 0 #000000;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.product a {
+  text-decoration: none;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Running Text */
+.running-text {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 0;
+  overflow: hidden;
+  width: 100%;
+  height: 190px;
+}
+
+.running-text p {
+  font-size: 200px;
+  line-height: 200px;
+  font-family: 'reselu', sans-serif;
+  color: black;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0 3rem;
+  animation: move-rtl 5000ms linear infinite;
+}
+
+@keyframes move-rtl {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Click Here Button */
+.click-here {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.click-here a {
+  font-size: 20px;
+  font-family: 'reselu', Arial, Helvetica, sans-serif;
+  color: #ff7200;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.click-here a:hover {
+  text-shadow: 1px 1px 0 #000000;
+}
+
+/* GIF and Description */
+.gifdesc {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.lightergif img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.desc {
+  flex: 1;
+  color: #333;
+  line-height: 1.5;
+}
+.desc p{
+  font-size: 16px;
+  font-family: 'reselu', Arial, sans-serif;
+
+  
+}
+
+.faq-title {
+  padding-top: 20px;
+  padding-bottom: none;
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #3a3a3a; /* Sesuaikan warna dengan palet Anda */
+  font-family: 'reselu', arial;
+}
+/* Footer */
+.footer {
+  background-color: #ffec83;
+  color: #ff0000;
+  text-shadow: 1px 1px 0 #ffffff;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: solid #ff7200;
+  margin-bottom: 0px;
+}
+
+footer span {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.sosmedlogo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  background-color: #ff7200;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    height: 100px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .best-seller {
+    display: flex;
+    flex-wrap: nowrap; /* Tidak membiarkan card pindah ke bawah */
+    justify-content: space-between;
+    gap: 20px;
+    overflow-x: auto; /* Menambahkan scroll horizontal jika diperlukan */
+    margin: 20px auto;
+    padding: 20px;
+    scrollbar-width: none;
+  }
+
+  .best-seller::-webkit-scrollbar {
+    display: none; /* Menyembunyikan scrollbar di browser berbasis Webkit seperti Chrome dan Safari */
+  }
+  
+  .product {
+    flex: 1 0 calc(33.333% - 20px); /* 3 card per baris */
+    max-width: 300px; /* Card tidak melebihi ukuran ini */
+    min-width: 200px; /* Batas minimal ukuran card */
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .product-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .product a {
+    text-decoration: none;
+  }
+  
+  .product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+
+  .gifdesc {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .lightergif img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  header {
+    padding: 0 40px;
+  }
+
+  .logo {
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .navbar {
+    margin-right: 30px;
+  }
+
+
+
+  .best-seller {
+    flex-direction: row;
+  }
+
+}

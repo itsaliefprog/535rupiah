@@ -1,0 +1,198 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Login Container */
+#loginContainer, .product-form-container {
+  background: #fff;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #ff7200;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff9f77;
+}
+
+/* Error Message */
+.error {
+  font-size: 14px;
+  margin-top: 10px;
+}
+/* Footer */
+.footer {
+  background-color: none;
+  color: #ff0000;
+  text-shadow: 1px 1px 0 #ffffff;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0em;
+  bottom: 0;
+}
+
+footer span {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.sosmedlogo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  background-color: #ff7200;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+}
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  #loginContainer, .product-form-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  input, button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Styling Tabel */
+#productList {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+#productList th,
+#productList td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#productList th {
+  background-color: #ff7200;
+  color: white;
+}
+
+#productList td {
+  background-color: #fff;
+}
+
+#productList img {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 5px;
+}
+
+#productList a {
+  color: #ff7200;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#productList a:hover {
+  text-decoration: underline;
+}
+
+/* Tombol Hapus */
+#productList .delete-product {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#productList .delete-product:hover {
+  background-color: #cc0000;
+}
+
+/* Styling Tabel untuk Handphone */
+@media only screen and (max-width: 768px) {
+  #productList {
+    font-size: 14px; /* Perkecil ukuran font untuk handphone */
+  }
+
+  #productList th,
+  #productList td {
+    padding: 8px; /* Sesuaikan padding */
+  }
+
+  #productList img {
+    max-width: 50px; /* Perkecil ukuran gambar */
+    max-height: 50px;
+  }
+
+  #productList td:first-child {
+    /* Batasi panjang teks di kolom Nama Produk */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px; /* Sesuaikan panjang untuk handphone */
+  }
+
+  #productList a {
+    font-size: 12px; /* Perkecil font untuk link */
+  }
+
+  #productList .delete-product {
+    font-size: 12px; /* Perkecil tombol hapus */
+    padding: 4px 8px; /* Sesuaikan padding tombol */
+  }
+
+  /* Agar tabel lebih mudah di-scroll horizontal pada layar kecil */
+  #productListContainer {
+    overflow-x: auto; /* Aktifkan horizontal scrolling */
+  }
+
+  #productList {
+    display: block; /* Ubah tabel jadi block agar mudah di-scroll */
+    width: 100%;
+  }
+}

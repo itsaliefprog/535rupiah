@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+  <link rel="stylesheet" href="stylesadmin.css">
+</head>
+<body>
+  <!-- Login Form -->
+  <div id="loginContainer">
+    <h2>Admin Login</h2>
+    <form id="loginForm">
+      <input type="password" id="passwordInput" placeholder="Enter password" autocomplete="new-password" required>
+      <button type="submit" id="loginButton">Login</button>
+    </form>
+  </div>
+
+  <!-- Admin Form -->
+  <div id="adminForm" style="display: none;">
+    <!-- Form Tambah Produk -->
+    <div class="product-form-container" style="display: none;">
+      <h2>Tambah Produk</h2>
+      <form id="productForm">
+        <label for="productName">Nama Produk:</label>
+        <input type="text" id="productName" required>
+
+        <label for="productPrice">Harga:</label>
+        <input type="text" id="productPrice" required>
+
+        <label for="productImage">Gambar Produk:</label>
+        <input type="file" id="productImage" accept="image/*" required>
+
+        <label for="productLink">Link Shopee:</label>
+        <input type="url" id="productLink" required>
+
+        <button type="submit">Tambah Produk</button>
+      </form>
+    </div>
+
+    <!-- Daftar Produk -->
+    <div id="productListContainer" >
+      <h2>Daftar Produk</h2>
+      <div id="productList"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>535RUPIAH |</span>
+    <a href="index.html">
+      <h3>Back to Home</h3>
+    </a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
