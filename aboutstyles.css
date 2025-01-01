@@ -5,8 +5,8 @@
 }
 
 body, html {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
+    font-family: 'reselu', Arial, sans-serif;
+    background: #FFFDF4;
     padding-top: 50px;
 }
 
@@ -26,7 +26,7 @@ header {
     top: 0;
     width: 100%;
     height: 60px;
-    background-color: #ffec83;
+    background-color: #FFF8CF;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -60,7 +60,8 @@ main {
     opacity: 0;
     transition: opacity 1s ease-in;
     margin-bottom: 20px;
-  }
+}
+
 .about-section h1 {
     font-family: 'reselu', Arial, sans-serif;
     color: #ff7200;
@@ -78,7 +79,17 @@ main {
 .fans-section {
     opacity: 0;
     transition: opacity 1.5s ease-in;
-  }
+}
+
+.fans-logo {
+    width: 90px;
+    /* Ukuran sama dengan logo toko */
+    display: block;
+    margin: 0 auto 20px;
+    margin-left: 5px;
+    /* Pusatkan logo di tengah */
+}
+
 .fans-section h2 {
     font-family: 'reselu', Arial, sans-serif;
     color: #ff7200;
@@ -90,7 +101,7 @@ main {
 .photo-gallery {
     display: flex;
     gap: 10px;
-    overflow-x: auto;
+    overflow-x: auto ;
     padding-bottom: 10px;
 }
 
@@ -102,7 +113,7 @@ main {
 
 /* Footer */
 .footer {
-    background-color: #ffec83;
+    background-color: #FFF8CF;
     color: #ff0000;
     text-shadow: 1px 1px 0 #ffffff;
     text-align: center;
@@ -147,7 +158,7 @@ footer span {
     /* Warna teks */
     text-decoration: none;
     /* Menghapus garis bawah */
-    background-color: #ffec83;
+    background-color: #FFF8CF;
     /* Latar belakang serupa dengan footer */
     padding: 5px 10px;
     /* Spasi dalam */
@@ -155,7 +166,7 @@ footer span {
     /* Membuat sudut membulat */
     font-weight: bold;
     /* Menebalkan teks */
-    
+
 }
 
 .admin:hover {
