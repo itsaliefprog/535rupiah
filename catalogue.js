@@ -46,7 +46,7 @@ function renderProducts(products) {
         <div class="product-details">
           <h3>${product.name}</h3>
           <p class="price">Rp${product.price}</p>
-          <a href="${product.link}" target="_blank" class="shopee-link">Beli di Shopee</a>
+          <a href="${product.link}" target="_blank" class="shopee-link">Order Now</a>
         </div>
       </div>
     `;
