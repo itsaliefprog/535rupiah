@@ -5,10 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
     setTimeout(() => {
       aboutSection.style.opacity = 1;
-    }, 100); // 0.1 seconds delay for a smoother effect
-  
+    }, 100); 
     setTimeout(() => {
       fansSection.style.opacity = 1;
-    }, 500); // 0.5 seconds delay for fans section
+    }, 500); 
   });
   
