@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Page</title>
   <link rel="stylesheet" href="stylesadmin.css">
 </head>
+
 <body>
   <!-- Login Form -->
   <div id="loginContainer">
-    <h2>Admin Login</h2>
+    <a href="about.html">
+      <img src="Images/adminVector.png" class="admin-vector"></img>
+    </a>
+    <h2 class="admin-login-text">Admin Login</h2>
     <form id="loginForm">
       <input type="password" id="passwordInput" placeholder="Enter password" autocomplete="new-password" required>
       <button type="submit" id="loginButton">Login</button>
@@ -20,26 +25,26 @@
   <div id="adminForm" style="display: none;">
     <!-- Form Tambah Produk -->
     <div class="product-form-container" style="display: none;">
-      <h2>Tambah Produk</h2>
+      <h2>Add Product</h2>
       <form id="productForm">
-        <label for="productName">Nama Produk:</label>
+        <label for="productName">Product name:</label>
         <input type="text" id="productName" required>
 
-        <label for="productPrice">Harga:</label>
+        <label for="productPrice">Price:</label>
         <input type="text" id="productPrice" required>
 
-        <label for="productImage">Gambar Produk:</label>
+        <label for="productImage">Image:</label>
         <input type="file" id="productImage" accept="image/*" required>
 
-        <label for="productLink">Link Shopee:</label>
+        <label for="productLink">Link:</label>
         <input type="url" id="productLink" required>
 
-        <button type="submit">Tambah Produk</button>
+        <button type="submit">Add Product</button>
       </form>
     </div>
 
     <!-- Daftar Produk -->
-    <div id="productListContainer" >
+    <div id="productListContainer">
       <h2>Daftar Produk</h2>
       <div id="productList"></div>
     </div>
@@ -47,7 +52,8 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <span>535RUPIAH |</span>
+
+    <span>@535RUPIAH |</span>
     <a href="index.html">
       <h3>Back to Home</h3>
     </a>
@@ -56,4 +62,5 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script type="module" src="admin.js"></script>
 </body>
+
 </html>
