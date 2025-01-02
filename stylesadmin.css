@@ -3,7 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'reselu', Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'reselu';
+  src: url('fonts/Reselu-R9q36.ttf') format('truetype');
 }
 
 /* Body Styling */
@@ -12,6 +17,20 @@ body {
   color: #333;
   line-height: 1.6;
   padding: 20px;
+  background-image: url(Images/bg2.png);
+  background-size: 100% 100%; 
+  background-position: center; 
+}
+
+.admin-vector {
+  height: 100px;
+}
+.admin-vector:hover {
+  transform: scale(1.05);
+}
+
+.admin-login-text {
+  color: #ff7200;
 }
 
 /* Login Container */
@@ -52,10 +71,11 @@ button:hover {
   font-size: 14px;
   margin-top: 10px;
 }
+
 /* Footer */
 .footer {
   background-color: none;
-  color: #ff0000;
+  color: #ff7200;
   text-shadow: 1px 1px 0 #ffffff;
   text-align: center;
   padding: 15px;
@@ -73,18 +93,21 @@ footer span {
   font-size: 16px;
 }
 
-.sosmedlogo {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
-  background-color: #ff7200;
-  border-radius: 50%;
-  color: #fff;
+footer a {
+  text-decoration: none;
+  color: #ff7200;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #FFF8CF;
+  border-radius: 5px;
   text-decoration: none;
 }
+
+footer a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
 /* Mobile Responsive */
 @media (max-width: 600px) {
   #loginContainer, .product-form-container {
@@ -156,43 +179,42 @@ footer span {
 /* Styling Tabel untuk Handphone */
 @media only screen and (max-width: 768px) {
   #productList {
-    font-size: 14px; /* Perkecil ukuran font untuk handphone */
+    font-size: 14px;
   }
 
   #productList th,
   #productList td {
-    padding: 8px; /* Sesuaikan padding */
+    padding: 8px;
   }
 
   #productList img {
-    max-width: 50px; /* Perkecil ukuran gambar */
+    max-width: 50px;
     max-height: 50px;
   }
 
   #productList td:first-child {
-    /* Batasi panjang teks di kolom Nama Produk */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 150px; /* Sesuaikan panjang untuk handphone */
+    max-width: 150px;
   }
 
   #productList a {
-    font-size: 12px; /* Perkecil font untuk link */
+    font-size: 12px;
   }
 
   #productList .delete-product {
-    font-size: 12px; /* Perkecil tombol hapus */
-    padding: 4px 8px; /* Sesuaikan padding tombol */
+    font-size: 12px;
+    padding: 4px 8px;
   }
 
   /* Agar tabel lebih mudah di-scroll horizontal pada layar kecil */
   #productListContainer {
-    overflow-x: auto; /* Aktifkan horizontal scrolling */
+    overflow-x: auto;
   }
 
   #productList {
-    display: block; /* Ubah tabel jadi block agar mudah di-scroll */
+    display: block;
     width: 100%;
   }
 }
