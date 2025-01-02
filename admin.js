@@ -84,11 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
       <table id="productList">
         <thead>
           <tr>
-            <th>Nama Produk</th>
-            <th>Harga</th>
-            <th>Gambar</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Image</th>
             <th>Link</th>
-            <th>Aksi</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
               <td>${product.name}</td>
               <td>Rp ${product.price}</td>
               <td><img src="${product.image_url}" alt="${product.name}" class="product-image"></td>
-              <td><a href="${product.link}" target="_blank">Lihat di Shopee</a></td>
-              <td><button class="delete-product" data-id="${product.id}">Hapus</button></td>
+              <td><a href="${product.link}" target="_blank">here</a></td>
+              <td><button class="delete-product" data-id="${product.id}">delete</button></td>
             </tr>
           `
             )
