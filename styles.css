@@ -8,16 +8,22 @@ body, html {
   font-family: 'reselu', Arial, sans-serif;
   background: #FFFDF4;
   padding-top: 50px;
+  background-image: url(Images/bg2.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @font-face {
   font-family: 'Marvelous';
   src: url('fonts/Marvelous-Semi-Bold.otf') format('opentype');
 }
+
 @font-face {
   font-family: 'reselu';
   src: url('fonts/Reselu-R9q36.ttf') format('truetype');
 }
+
 /* Default hidden state */
 .slide-effect {
   opacity: 0;
@@ -34,7 +40,8 @@ body, html {
 /* Default hidden state */
 .fade-effect {
   opacity: 0;
-  transition: opacity 4s ease; /* Durasi dan transisi efek */
+  transition: opacity 4s ease;
+  /* Durasi dan transisi efek */
 }
 
 /* Fade-in animation */
@@ -49,12 +56,14 @@ header {
   width: 100%;
   height: 60px;
   background-color: #FFF8CF;
+  background-image: url('Images/texture535RUPIAH.png');
+  border-image: url('Images/texture535RUPIAH.png');
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  border-bottom: solid #ff7200;
+  border-image: url();
   z-index: 1000;
 }
 
@@ -64,10 +73,10 @@ header {
 }
 
 .navbar a {
-  color: #ff7200;
+  color: #ff7c1a;
   text-decoration: none;
+  text-shadow: 1px 1px 0 #a1561d;
   margin: 0 20px;
-  text-shadow: 1px 1px 0 #000000;
   font-family: 'reselu', Arial, sans-serif;
 }
 
@@ -76,15 +85,15 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
   padding: 20px;
 }
 
 .product {
   position: relative;
   width: 200px;
-  height: 300px;
-  border-radius: 10px;
+  height: 250px;
+  border-radius: 17px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -94,6 +103,12 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: blur(1px);
+  -webkit-filter: blur(1.5px);
+}
+.product img:hover{
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
 }
 
 .product-name {
@@ -101,8 +116,24 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ffec83;
-  text-shadow: 1px 1px 0 #000000;
+  color: #ff7C1A;
+  text-shadow:
+    -2px -2px 0 #ffffff,
+    /* Bayangan atas-kiri */
+    2px -2px 0 #ffffff,
+    /* Bayangan atas-kanan */
+    -2px 2px 0 #ffffff,
+    /* Bayangan bawah-kiri */
+    2px 2px 0 #ffffff,
+    /* Bayangan bawah-kanan */
+    -3px 0px 0 #ffffff,
+    /* Tambahan bayangan kiri */
+    3px 0px 0 #ffffff,
+    /* Tambahan bayangan kanan */
+    0px -3px 0 #ffffff,
+    /* Tambahan bayangan atas */
+    0px 3px 0 #ffffff;
+  /* Tambahan bayangan bawah */
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -115,7 +146,7 @@ header {
 }
 
 .product:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -160,7 +191,8 @@ header {
 .click-here a {
   font-size: 20px;
   font-family: 'reselu', Arial, Helvetica, sans-serif;
-  color: #ff7200;
+  background-color: #ff7200;
+  color: #FFF8CF;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -191,27 +223,48 @@ header {
   color: #333;
   line-height: 1.5;
 }
-.desc p{
-  font-size: 16px;
+
+.desc p {
+  font-size: 25px;
   font-family: 'reselu', Arial, sans-serif;
 
-  
+
 }
 
 .faq-title {
   padding-top: 20px;
   padding-bottom: none;
   padding-left: 20px;
-  font-size: 24px;
+  font-size: 70px;
   font-weight: bold;
-  color: #3a3a3a; /* Sesuaikan warna dengan palet Anda */
+  color: #303030;
   font-family: 'reselu', arial;
 }
+
+.accordion-body {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 5px; 
+}
+
+.accordion-button {
+  background-color: white;
+  color: #303030;
+  ;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff8cf; 
+  color: #303030;
+}
+
+
 /* Footer */
 .footer {
   background-color: #FFF8CF;
-  color: #ff0000;
-  text-shadow: 1px 1px 0 #ffffff;
+  background-image: url('Images/texture535RUPIAH.png');
+  border-image: url('Images/texture535RUPIAH.png');
+  color: #ff7c1a;
   text-align: center;
   padding: 15px;
   width: 100%;
@@ -229,14 +282,11 @@ footer span {
 }
 
 .sosmedlogo {
-  width: 40px;
-  height: 40px;
+  width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 5px;
-  background-color: #ff7200;
-  border-radius: 50%;
   color: #fff;
   text-decoration: none;
 }
@@ -261,36 +311,37 @@ footer span {
 
   .best-seller {
     display: flex;
-    flex-wrap: nowrap; /* Tidak membiarkan card pindah ke bawah */
+    flex-wrap: nowrap;
     justify-content: space-between;
     gap: 20px;
-    overflow-x: auto; /* Menambahkan scroll horizontal jika diperlukan */
+    overflow-x: auto;
     margin: 20px auto;
     padding: 20px;
     scrollbar-width: none;
   }
 
   .best-seller::-webkit-scrollbar {
-    display: none; /* Menyembunyikan scrollbar di browser berbasis Webkit seperti Chrome dan Safari */
+    display: none;
+    
   }
-  
+
   .product {
-    flex: 1 0 calc(33.333% - 20px); /* 3 card per baris */
-    max-width: 300px; /* Card tidak melebihi ukuran ini */
-    min-width: 200px; /* Batas minimal ukuran card */
+    flex: 1 0 calc(33.333% - 20px);
+    max-width: 300px;
+    min-width: 200px;
     height: 250px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
   .product img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .product-name {
     position: absolute;
     top: 50%;
@@ -299,16 +350,16 @@ footer span {
     padding: 5px 10px;
     border-radius: 5px;
   }
-  
+
   .product a {
     text-decoration: none;
   }
-  
+
   .product:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
   }
-  
+
 
   .gifdesc {
     flex-direction: column;
@@ -335,8 +386,6 @@ footer span {
   .navbar {
     margin-right: 30px;
   }
-
-
 
   .best-seller {
     flex-direction: row;
