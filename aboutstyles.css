@@ -7,6 +7,10 @@
 body, html {
     font-family: 'reselu', Arial, sans-serif;
     background: #FFFDF4;
+    background-image: url(Images/bg2.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     padding-top: 50px;
 }
 
@@ -27,6 +31,7 @@ header {
     width: 100%;
     height: 60px;
     background-color: #FFF8CF;
+    background-image: url('Images/texture535RUPIAH.png');
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,6 +39,7 @@ header {
     padding: 10px 20px;
     border-bottom: solid #ff7200;
     z-index: 1000;
+    border-image: url('Images/texture535RUPIAH.png');
 }
 
 
@@ -46,13 +52,14 @@ header {
     color: #ff7200;
     text-decoration: none;
     margin: 0 20px;
-    text-shadow: 1px 1px 0 #000000;
+    text-shadow: 1px 1px 0 #a1561d;
     font-family: 'reselu', Arial, Helvetica, sans-serif;
 }
 
 /* Bagian Tengah */
 main {
     padding: 20px;
+    justify-content: center;
 }
 
 /* Section: About */
@@ -83,11 +90,9 @@ main {
 
 .fans-logo {
     width: 90px;
-    /* Ukuran sama dengan logo toko */
     display: block;
     margin: 0 auto 20px;
     margin-left: 5px;
-    /* Pusatkan logo di tengah */
 }
 
 .fans-section h2 {
@@ -101,7 +106,7 @@ main {
 .photo-gallery {
     display: flex;
     gap: 10px;
-    overflow-x: auto ;
+    overflow-x: auto;
     padding-bottom: 10px;
 }
 
@@ -114,8 +119,8 @@ main {
 /* Footer */
 .footer {
     background-color: #FFF8CF;
-    color: #ff0000;
-    text-shadow: 1px 1px 0 #ffffff;
+    background-image: url('Images/texture535RUPIAH.png');
+    color: #ff7c1a;
     text-align: center;
     padding: 15px;
     width: 100%;
@@ -124,6 +129,7 @@ main {
     align-items: center;
     justify-content: center;
     border-top: solid #ff7200;
+    border-image: url('Images/texture535RUPIAH.png');
     margin-bottom: 0px;
 }
 
@@ -133,47 +139,32 @@ footer span {
 }
 
 .sosmedlogo {
-    width: 40px;
-    height: 40px;
+    width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 5px;
-    background-color: #ff7200;
-    border-radius: 50%;
     color: #fff;
     text-decoration: none;
 }
 
 .admin {
-    position: fixed;
-    /* Menempatkan elemen di posisi tetap */
     bottom: 15px;
-    /* Berada di dekat bagian bawah layar */
     right: 15px;
-    /* Jarak dari tepi kanan layar */
-    font-size: 16px;
-    /* Ukuran teks */
-    color: #ff000079;
-    /* Warna teks */
     text-decoration: none;
-    /* Menghapus garis bawah */
-    background-color: #FFF8CF;
-    /* Latar belakang serupa dengan footer */
     padding: 5px 10px;
-    /* Spasi dalam */
     border-radius: 5px;
-    /* Membuat sudut membulat */
     font-weight: bold;
-    /* Menebalkan teks */
+}
 
+.admin-button {
+    width: 30px;
 }
 
 .admin:hover {
-    background-color: #ff7200;
-    /* Warna saat hover */
     color: #ffffff;
-    /* Warna teks saat hover */
+    border-radius: 50%;
+    transform: scale(1.05);
 
 }
 
